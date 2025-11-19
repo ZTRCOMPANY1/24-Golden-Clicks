@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Golden Clicks</title>
+<title>Click & Chill</title>
 <link rel="stylesheet" href="style.css">
 
 <!-- Firebase SDK -->
@@ -14,23 +14,23 @@
 <body>
     <!-- Login / Cadastro -->
     <div id="loginContainer" class="container">
-        <h1>Login / Register 🎮</h1>
+        <h1>Login / Cadastro 🎮</h1>
         <input type="text" id="username" placeholder="Nome de usuário">
         <input type="password" id="password" placeholder="Senha">
         <button id="loginButton">Login</button>
-        <button id="registerButton">Register</button>
+        <button id="registerButton">Cadastrar</button>
         <p id="loginMessage"></p>
     </div>
 
     <!-- Game -->
     <div id="gameContainer" class="container" style="display:none;">
-        <h1>Golden Clicks 🎮</h1>
+        <h1>Click & Chill 🎮</h1>
         <div class="score">
-            Points: <span id="score">0</span>
+            Pontos: <span id="score">0</span>
         </div>
 
         <div id="clickArea">
-            <button id="clickButton">Click here!</button>
+            <button id="clickButton">Clique Aqui!</button>
         </div>
 
         <div class="progress-container">
@@ -39,18 +39,18 @@
 
         <div class="upgrades">
             <h2>Upgrades</h2>
-            <button class="upgradeBtn" id="upgradeClick">Click +1 <span class="cost">(10)</span></button>
-            <button class="upgradeBtn" id="upgradeAuto">Automatic +1/s <span class="cost">(50)</span></button>
+            <button class="upgradeBtn" id="upgradeClick">Clique +1 <span class="cost">(10)</span></button>
+            <button class="upgradeBtn" id="upgradeAuto">Automático +1/s <span class="cost">(50)</span></button>
             <button class="upgradeBtn" id="upgradeMega">Mega +5 <span class="cost">(200)</span></button>
         </div>
 
-        <button id="resetButton" class="reset">Reset Points</button>
+        <button id="resetButton" class="reset">Reiniciar Pontos</button>
         <button id="logoutButton" class="reset">Logout</button>
 
         <!-- Volume -->
         <div class="volume-controls">
             <h2>Volume</h2>
-            <label for="clickVolume">Click sound:</label>
+            <label for="clickVolume">Som do Clique:</label>
             <input type="range" id="clickVolume" min="0" max="1" step="0.01" value="1">
             <label for="musicVolume">Música de Fundo:</label>
             <input type="range" id="musicVolume" min="0" max="1" step="0.01" value="0.5">
@@ -64,7 +64,7 @@
         <div id="ranking">
             <h2>Ranking Global 🌍</h2>
             <ol id="rankingList"></ol>
-            <button onclick="loadGlobalRanking()">Update Ranking</button>
+            <button onclick="loadGlobalRanking()">Atualizar Ranking</button>
         </div>
 
         <!-- Partículas -->
