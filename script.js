@@ -16,31 +16,6 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 const database = firebase.database();
 
-// Webhook do Discord
-const WEBHOOK_URL = "https://discord.com/api/webhooks/1440550441715892305/P3CUeSbkJ0O6rJosra13vyv62KDnGw2XUw9JHwEGMIFGRBYxGVUfOneUNaJc_byGgiUe";
-
-async function enviarRanking(){
-    const snapshot = await database.ref('players').once('value');
-    const players = snapshot.val();
-    if(!players) return;
-
-    // Pegar top 10 jogadores
-    const topPlayers = Object.keys(players)
-        .map(user => ({user, score: players[user].score || 0}))
-        .sort((a,b)=>b.score - a.score)
-        .slice(0, 10);
-
-    const mensagem = topPlayers.map((p,i) => `${i+1}. **${p.user}** - ${p.score} pontos`).join('\n');
-
-    await fetch(WEBHOOK_URL, {
-        method: 'POST',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({content: `📊 Ranking Atualizado:\n${mensagem}`})
-    });
-}
-
-// Atualiza a cada 1 minuto
-setInterval(enviarRanking, 60000);
 
 
 // === Login / Cadastro ===
