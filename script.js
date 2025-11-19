@@ -11,8 +11,6 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 const database = firebase.database();
 
-
-
 // === Login / Cadastro ===
 const loginContainer = document.getElementById("loginContainer");
 const gameContainer = document.getElementById("gameContainer");
