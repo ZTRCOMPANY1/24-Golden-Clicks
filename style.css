@@ -1,11 +1,19 @@
+/* Fundo animado */
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(to right, #1e3c72, #2a5298);
-    color: white;
-    text-align: center;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    animation: gradientBG 30s ease infinite;
+    background: linear-gradient(-45deg, #1e3c72, #2a5298, #6a11cb, #2575fc);
+    background-size: 400% 400%;
+    color: white;
+}
+
+@keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
 }
 
 .container {
@@ -118,6 +126,49 @@ button:hover {
     width: 100%;
 }
 
+/* Ranking moderno */
+#ranking {
+    background: rgba(0,0,0,0.5);
+    padding: 15px;
+    border-radius: 15px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+#ranking h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#rankingList {
+    list-style: none;
+    padding: 0;
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+#rankingList li {
+    background: rgba(255,255,255,0.1);
+    margin: 5px 0;
+    padding: 8px 12px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    transition: transform 0.2s, background 0.3s;
+}
+
+#rankingList li:hover {
+    transform: scale(1.02);
+    background: rgba(255,255,255,0.2);
+}
+
+#rankingList li.currentUser {
+    background: rgba(255,215,0,0.5);
+    font-weight: bold;
+    color: black;
+}
+
+/* Partículas */
 #particleCanvas {
     position: absolute;
     top: 0;

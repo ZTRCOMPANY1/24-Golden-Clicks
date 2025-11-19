@@ -8,7 +8,6 @@ const firebaseConfig = {
   messagingSenderId: "531403003084",
   appId: "1:531403003084:web:bd981d24202df6b79f5e69"
 };
-
 firebase.initializeApp(firebaseConfig);
 const database = firebase.database();
 
@@ -90,7 +89,7 @@ bgMusic.volume = musicVolumeSlider.value;
 clickVolumeSlider.addEventListener("input", () => clickSound.volume = clickVolumeSlider.value);
 musicVolumeSlider.addEventListener("input", () => bgMusic.volume = musicVolumeSlider.value);
 
-// Particles
+// Partículas
 const canvas = document.getElementById("particleCanvas");
 const ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth;
@@ -261,6 +260,9 @@ function loadGlobalRanking(){
         players.forEach(p=>{
             const li = document.createElement("li");
             li.textContent = `${p.username} - ${p.score} pontos`;
+            if(currentUser && p.username === currentUser){
+                li.classList.add("currentUser"); // destaca o jogador atual
+            }
             rankingList.appendChild(li);
         });
     });
