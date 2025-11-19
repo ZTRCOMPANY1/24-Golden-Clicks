@@ -1,8 +1,3 @@
-const firebase = require('firebase/compat/app');
-require('firebase/compat/database');
-const fetch = require('node-fetch'); // npm install node-fetch
-
-
 // === Firebase Config ===
 const firebaseConfig = {
   apiKey: "AIzaSyCPy0-8bD-2ckURSFqC5LaapjfuwfYQX1Y",
