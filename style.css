@@ -1,0 +1,126 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: rgba(0,0,0,0.6);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.7);
+    position: relative;
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    margin: 5px;
+    border-radius: 10px;
+    border: none;
+    width: calc(100% - 22px);
+}
+
+button {
+    padding: 15px 25px;
+    font-size: 18px;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.1s, background 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+#clickButton {
+    background-color: #ff9900;
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.upgrades {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.upgradeBtn {
+    background-color: #00ccff;
+    color: white;
+    position: relative;
+}
+
+.upgradeBtn:hover {
+    background-color: #33d6ff;
+}
+
+.upgradeBtn .cost {
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.reset {
+    background-color: #ff3333;
+}
+
+.reset:hover {
+    background-color: #ff6666;
+}
+
+.progress-container {
+    width: 100%;
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 20px;
+    margin: 15px 0;
+    height: 25px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 100%;
+    background-color: #ffcc00;
+    transition: width 0.3s;
+    border-radius: 20px;
+}
+
+.volume-controls {
+    margin: 20px 0;
+    text-align: left;
+}
+
+.volume-controls label {
+    display: block;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.volume-controls input[type="range"] {
+    width: 100%;
+}
+
+#particleCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
